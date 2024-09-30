@@ -1,0 +1,15 @@
+ [
+    {
+        "name":"Bon Appetite",
+        "location":"newBusstand",
+        "phnumber":"1234567890",
+        "rating":"4.5"
+    },
+    {
+        "name":"Pintu's Kitchen",
+        "location":"SanoBazar",
+        "phnumber":"1357924680",
+        "rating":"4.0"
+    }
+
+]
