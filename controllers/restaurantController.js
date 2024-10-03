@@ -7,7 +7,8 @@ exports.createRestaurant = async (req, res) =>{
             name:req.body.name,
             location:req.body.location,
             phonenumber:req.body.phonenumber,
-            rating:req.body.rating
+            rating:req.body.rating,
+            date:req.body.date
         });
         newRestaurant = await newRestaurant.save(); // Save the new restaurant to the database
         res.send(newRestaurant); // Send the saved restaurant as a response
@@ -44,7 +45,8 @@ exports.updateRestaurant = async (req, res) => {
             name:req.body.name,
             location:req.body.location,
             phonenumber:req.body.phonenumber,
-            rating:req.body.rating
+            rating:req.body.rating,
+            date:req.body.date
         }, { new: true }); // Return the updated restaurant
 
         if (!updatedRestaurant) return res.status(404).send('Restaurant not found in database'); // If room is not found, return 404
@@ -59,7 +61,7 @@ exports.deleteRestaurant = async (req, res) => {
     try {
         const restaurantById = await RestaurantModel.findByIdAndDelete(req.params.id); // Find room by ID and delete it
         if (!restaurantById) return res.status(404).send('Restaurant not found in database'); // If room is not found, return 404
-        res.send("Restaurantdeleted successfully"); // Send success message
+        res.send("Restaurant deleted successfully"); // Send success message
     } catch (err) {
         res.status(400).send(err.message); // Send an error response if something goes wrong
     }

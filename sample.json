@@ -3,13 +3,15 @@
         "name":"Bon Appetite",
         "location":"ChurchRoad",
         "phonenumber":"1234567890",
-        "rating":"4.5"
+        "rating":"4.5",
+        "date":"Date.now()"
     },
     {
         "name":"Pintu's Kitchen",
         "location":"SanoBazar",
         "phonenumber":"1357924680",
-        "rating":"4.0"
+        "rating":"4.0",
+        "date":"Date.now()"
     }
 
 ]

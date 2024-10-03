@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const restaurantSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,  // Restaurantname is mandatory
+        required: true,  // Restaurant name is mandatory
       },
     location: {
         type:String,
@@ -11,10 +11,15 @@ const restaurantSchema = new mongoose.Schema({
     },
     phonenumber: {
         type: Number,
-        required: true, // RestaurantPhoneNumber is mandatory
+        required: true, // customer PhoneNumber is mandatory
       },
     rating: {
         type: Number,
+    },
+    date:{
+      type: Date,
+      default: Date.now,
+      required:true
     }
 });
 
